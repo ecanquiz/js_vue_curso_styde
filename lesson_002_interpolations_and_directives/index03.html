@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="app" class="container">
+            <div class="welcome">
+                <h1>Bienvenido {{ name + '!!' }}</h1>
+
+                <p>{{ 2 + 7 }}</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2017 Styde.net.</p>
+        </footer>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        </script>
+
+        <script>
+            var vm = new Vue({
+                el: "#app",
+                data: {
+                    name: 'Ernesto'
+                }
+            });
+        </script>
+    </body>
+</html>

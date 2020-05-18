@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="app" class="container">
+            <div class="welcome">
+                <h1 v-text="name + ': ' + reversedName">                   
+                </h1>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2017 Styde.net.</p>
+        </footer>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        </script>
+
+        <script>
+            var vm = new Vue({
+                el: "#app",
+                data: {
+                    name: 'Ernesto',
+                    team: false,
+                    project: 'Styde' 
+                },
+                computed: {
+                    reversedName: function () {
+                        return this.name.split('').reverse().join('');
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
