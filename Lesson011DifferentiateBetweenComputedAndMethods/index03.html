@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>VueJS Methods - stackoverflow</title>
+            <link href="style.css" rel="stylesheet" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.11/vue.min.js"></script>
+    
+        </head>
+        <body>
+            <div id="vue-app">
+                <h1>Methods</h1>
+                <button v-on:click="a++">Add to A</button>
+                <button v-on:click="b++">Add to B</button>
+                <p>Age + A = {{ addToAmethod() }}</p>
+                <p>Age + B = {{ addToBmethod() }}</p>
+            </div>
+        </body>
+        
+        <script>
+new Vue({
+    el: '#vue-app',
+    data: {
+        a: 0,
+        b: 0,
+        age: 20
+    },
+    methods: {
+        addToAmethod: function(){
+            console.log('addToAmethod');
+            return this.a + this.age;
+        },
+        addToBmethod: function(){
+            console.log('addToBmethod');
+            return this.b + this.age;
+        }
+    }
+});
+
+
+        </script>
+    </html>

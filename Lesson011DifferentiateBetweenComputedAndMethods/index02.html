@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div id="app">
+  {{ this.myName }}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+      el: '#app',
+      data:{
+        valor: 0,
+        name: 'Alfredo P'
+      },
+      computed:{
+        myName: function(){
+          return this.name.toUpperCase();
+        }
+      },
+      created(){
+        //this.myName()
+      }
+    })
+</script>
+</body>
+</html>
